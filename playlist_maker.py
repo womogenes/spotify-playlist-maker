@@ -16,7 +16,7 @@ SPOTIFY_REDIRECT_URI = os.getenv("SPOTIFY_REDIRECT_URI")
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=SPOTIFY_CLIENT_ID,
                                                client_secret=SPOTIFY_CLIENT_SECRET,
                                                redirect_uri=SPOTIFY_REDIRECT_URI,
-                                               scope="playlist-modify-private"))
+                                               scope="playlist-modify"))
 
 def extract_spotify_urls(file_path):
     with open(file_path, "r") as file:
